@@ -1,4 +1,4 @@
-(ns sicp.chapter1.exercise1)
+(ns sicp.one.one)
 
 ;; Below is a sequence of expressions. What is the result printed by the
 ;; interpreter in response to each expression? Assume that the sequence is to be

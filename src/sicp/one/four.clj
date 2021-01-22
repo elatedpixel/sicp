@@ -1,4 +1,4 @@
-(ns sicp.chapter1.exercise4
+(ns sicp.one.four
   (:require [clojure.test :as test]))
 
 ;; Exercise 1.4. Observe that our model of evaluation allows for combinations
@@ -17,4 +17,4 @@
     7 -1 8)
   )
 
-(test/run-tests 'sicp.chapter1.exercise4)
+(test/run-tests 'sicp.one.four)
