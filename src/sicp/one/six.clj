@@ -20,20 +20,22 @@
 
 ;; Delighted, Alyssa uses new-if to rewrite the square-root program:
 
-(defn average [x y]
-  (/ (+ x y) 2))
+(defn average ^Double [x y]
+  (double (/ (+ x y) 2)))
 
-(defn improve [guess x]
-  (average guess (/ x guess)))
+(defn improve ^Double [guess x]
+  (average guess (double (/ x guess))))
 
-(defn square [x] (* x x))
+(defn square ^Double [x] (* x x))
 
 (defn good-enough? [guess x]
   (< (Math/abs (- (square guess) x)) 0.001))
 
-(defn sqrt-iter [guess x]
+(defn sqrt-iter [^Double guess ^Double x]
   (new-if (good-enough? guess x)
           guess
           (sqrt-iter (improve guess x) x)))
+
+(sqrt-iter 13 50)
 
 ;; What happens when Alyssa attempts to use this to compute square roots? Explain.
